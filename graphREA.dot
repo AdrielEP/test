@@ -1,0 +1,21 @@
+digraph REActif
+{
+node [shape=plaintext]
+
+  subgraph cluster_REAction
+  {label=<
+<FONT POINT-SIZE="20.0">
+REAction
+</FONT>
+: programme de traitement de signal<BR/>
+Sébastien COUDERT
+>
+color="green"
+//{label="REAction: programme de traitement de signal\nSébastien COUDERT" color="green"
+    REAction_GPU[shape=record, label="{code GPU|Sébastien COUDERT|stagiaires}" ]
+    REAction_GEth[shape=record, label="{code GEth|Sébastien COUDERT|Sabri RABAHIA\n(alternant)\nA. BOUJRAD\nLuc LEGEARD\n(IR info.)}" ]
+    REAction_CPU[shape=record, label="{code CPU|Sébastien COUDERT|Sabri RABAHIA\n(alternant)\nstagiaires}" ]
+  }//REAction
+
+}
+
