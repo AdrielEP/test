@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Config enp5s0
-function 1GEth (){
+function 2GEth (){
     eth=enp5s0
 
     ifconfig $eth
@@ -35,7 +35,7 @@ function 10GEthOrange (){
 
 #Config Global
 function globalConf (){
-	1GEth();
+	2GEth();
 	sleep 0.30;
 	10GEthBlack();
 	sleep 0.30;
