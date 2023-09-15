@@ -25,6 +25,8 @@ make config
 ~~~ { .bash }
 fping 10.2.10.48 10.2.10.70
 fping 10.2.11.49 10.2.11.72
+#or
+make test
 ~~~
 
 # graph

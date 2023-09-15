@@ -24,3 +24,9 @@ configF1:
 	sudo /sbin/ifconfig $(iff1) $(ipF1)/24
 	sudo /sbin/ifconfig $(iff1) mtu $(MTU)
 	/sbin/ifconfig $(iff1)
+
+testF0:
+	fping $(ipF0) 10.2.10.70
+
+testF1:
+	fping $(ipF1) 10.2.11.72
