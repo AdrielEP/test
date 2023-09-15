@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Config enp6s0
-function 1GEth (){
-    eth=enp5s0
+function config_1GEth() {
+    eth=enp6s0
 
     ifconfig $eth
     ethtool $eth
@@ -11,9 +11,9 @@ function 1GEth (){
     fping 10.2.1.21 10.2.1.86
 }
 
-#Config enp5s0f0
-function 10GEthBlack (){
-    eth=enp6s0f0
+# Config enp5s0f0
+function config_10GEthBlack() {
+    eth=enp5s0f0
 
     ifconfig $eth
     ethtool $eth
@@ -22,9 +22,9 @@ function 10GEthBlack (){
     fping 10.2.10.38 10.2.10.84
 }
 
-#Config enp5s0f1
-function 10GEthOrange (){
-    eth=enp6s0f1
+# Config enp5s0f1
+function config_10GEthOrange() {
+    eth=enp5s0f1
 
     ifconfig $eth
     ethtool $eth
@@ -33,14 +33,14 @@ function 10GEthOrange (){
     fping 10.2.11.34 10.2.11.86
 }
 
-#Config Global
-function globalConf (){
-	1GEth();
-	sleep 0.30;
-	10GEthBlack();
-	sleep 0.30;
-	10GEthOrange();
-	sleep 0.30;
-	echo "Interface setup"
-
+# Config global
+function globalConf() {
+    config_1GEth
+    sleep 0.30
+    config_10GEthBlack
+    sleep 0.30
+    config_10GEthOrange
+    sleep 0.30
+    echo "Interfaces setup"
 }
+

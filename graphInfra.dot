@@ -16,13 +16,10 @@ digraph G
 	enp5s0f1[shape=ellipse,label="enp5s0f1: 10GEth\n IP; 10.2.11.34\n MAC: a0:36:9f:24:53:ea"]
   }//GANP439
 
- enp5s0 -> enp6s0
- enp6s0f0 -> enp5s0f0
-enp6s0f1 -> enp5s0f1
+ enp5s0 -> enp6s0 [dir=both color="yellow"]
+ enp6s0f0 -> enp5s0f0 [dir=both color="black"]
+ enp6s0f1 -> enp5s0f1 [dir=both color="orange"]
 
-enp6s0 -> enp5s0
-enp5s0f0 -> enp6s0f0
-enp5s0f1 -> enp6s0f1
+
 }
-
 
