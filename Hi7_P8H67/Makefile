@@ -18,3 +18,9 @@ configF0:
 	sudo /sbin/ifconfig $(iff0) $(ipF0)/24
 	sudo /sbin/ifconfig $(iff0) mtu $(MTU)
 	/sbin/ifconfig $(iff0)
+
+configF1:
+	echo eth=$(iff1)
+	sudo /sbin/ifconfig $(iff1) $(ipF0)/24
+	sudo /sbin/ifconfig $(iff1) mtu $(MTU)
+	/sbin/ifconfig $(iff1)
