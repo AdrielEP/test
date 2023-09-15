@@ -1,35 +1,47 @@
 #!/bin/bash
 
+# eth
+function config {
+  #eth=enp5s0
+  #ip=10.2.1.86
+  eth=$1
+  ip=$2
+
+  #info
+  ifconfig $eth
+  ethtool $eth
+
+  #setup
+  sudo /sbin/ifconfig $eth $ip/24
+}
+#ToDo: force GEth
+#function config_2GEth {
+#function config_10GEth {
+
+
 # enp5s0
 function config_2GEth {
     eth=enp5s0
-
-    ifconfig $eth
-    ethtool $eth
-
-    sudo /sbin/ifconfig $eth 10.2.1.86/24
+    ip=10.2.1.86
+    config $eth $ip
+}
+function test_2GEth {
     fping 10.2.1.86 10.2.1.21
 }
 
 # enp6s0f0
 function config_10GEthBlack {
-    eth=enp6s0f0
-
-    ifconfig $eth
-    ethtool $eth
-
-    sudo /sbin/ifconfig $eth 10.2.10.84/24
-    fping 10.2.10.84 10.2.10.38
+  eth=enp6s0f0
+  ip=10.2.10.84
+  config $eth $ip
+    fping $ip 10.2.10.38
 }
 
 # enp6s0f1
 function config_10GEthOrange {
-    eth=enp6s0f1
-
-    ifconfig $eth
-    ethtool $eth
-
-    sudo /sbin/ifconfig $eth 10.2.11.86/24
+  eth=enp6s0f1
+  ip=10.2.11.86
+  config $eth $ip
     fping 10.2.11.86 10.2.11.34
 }
 
