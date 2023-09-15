@@ -1,7 +1,5 @@
 # config
 
-WinP
-
 ## i3
 
 ~~~ { .bash }
@@ -63,8 +61,8 @@ TCP window size:  325 KByte (default)
 
 # graph
 
-WinP
-
 ~~~ { .bash }
 dot -Tps graph.dot > graph.ps && evince graph.ps &
+#or
+make view
 ~~~
