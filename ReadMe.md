@@ -50,6 +50,10 @@ TCP window size:  128 KByte (default)
 [ ID] Interval       Transfer     Bandwidth
 [  2] 0.0000-10.0029 sec  11.5 GBytes  9.90 Gbits/sec
 
+
+[  5] local 10.2.11.49 port 5001 connected with 10.2.11.72 port 44918
+[ ID] Interval       Transfer     Bandwidth
+[  5] 0.0000-10.0004 sec  3.12 GBytes  2.68 Gbits/sec
 ~~~
 
 ### i7
@@ -76,6 +80,14 @@ TCP window size:  325 KByte (default)
 [  1] 0.0000-10.0128 sec  11.5 GBytes  9.89 Gbits/sec
 
 
+ubuntu22@XU22-GPU:~/bench/transceivers/Hi7_P8H67$ iperf -c 10.2.11.49 --window 8k
+------------------------------------------------------------
+Client connecting to 10.2.11.49, TCP port 5001
+TCP window size: 15.6 KByte (WARNING: requested 7.81 KByte)
+------------------------------------------------------------
+[  1] local 10.2.11.72 port 44918 connected with 10.2.11.49 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-10.0045 sec  3.12 GBytes  2.68 Gbits/sec
 ~~~
 
 # graph
