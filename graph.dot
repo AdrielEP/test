@@ -8,8 +8,8 @@ digraph REActif_transceiver
 
   subgraph cluster_i7
   {label="P8H67 i7"
-    i1f0[label="enp1s0f0: 10GEth SFP\n IP=10.2.10.70\n MAC=90:e2:ba:c6:be:71"]
-    i1f1[label="enp1s0f1: 10GEth SFP\n IP=10.2.11.72\n MAC=90:e2:ba:c6:be:72"]
+    i1f0[label="enp1s0f0: 10GEth SFP\n IP=10.2.10.70\n MAC=a0:36:9f:3c:e3:71"]
+    i1f1[label="enp1s0f1: 10GEth SFP\n IP=10.2.11.72\n MAC=a0:36:9f:3c:e3:72"]
   }//i7
 
  i0f0 -> i1f0 [label="transceiver\n Intel 10GEth\n fiber"]
