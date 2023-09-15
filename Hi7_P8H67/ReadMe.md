@@ -10,7 +10,7 @@
 
 ### slot 1
 
-blue: Intel 10GEth
+blue: Intel 10GEth #1
 
 `F0`=*`:70`
 `F1`=*`:72`
