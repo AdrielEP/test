@@ -12,8 +12,8 @@ digraph REActif_transceiver
     i1f1[label="enp1s0f1: 10GEth SFP\n IP=10.2.11.72\n MAC=a0:36:9f:3c:e3:72"]
   }//i7
 
- i0f0 -> i1f0 [label="transceiver\n Intel 10GEth\n fiber"]
- i0f1 -> i1f1 [label="transceiver\n Intel 10GEth\n fiber"]
- i1f0 -> i0f0 [label="transceiver\n Intel 10GEth\n fiber"]
- i1f1 -> i0f1 [label="transceiver\n Intel 10GEth\n fiber"]
+ i0f0 -> i1f0 [label="transceiver\n Intel 10GEth \n*-IN2 fiber"]
+ i0f1 -> i1f1 [label="transceiver\n Intel 10GEth \n*-IN2 fiber"]
+ i1f0 -> i0f0 [label="transceiver\n Intel 10GEth \n*-IN2 fiber"]
+ i1f1 -> i0f1 [label="transceiver\n Intel 10GEth \n*-IN2 fiber"]
 }
