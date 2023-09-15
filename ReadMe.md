@@ -20,6 +20,12 @@ git pull
 make config
 ~~~
 
+# test
+
+~~~ { .bash }
+fping 10.2.10.48 10.2.10.70
+fping 10.2.10.49 10.2.10.72
+~~~
 
 # graph
 
