@@ -15,6 +15,8 @@ blue: Intel 10GEth #1
 `F0`=*`:70`
 `F1`=*`:72`
 
+note: graph annotate `i1f0` and `i1f1`
+
 ### slot 2
 
 black: empty
