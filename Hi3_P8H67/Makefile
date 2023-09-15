@@ -13,6 +13,7 @@ all: config test bench
 config: configF0 configF1
 
 configF0:
-	eth=$(i0f0)
-	sudo /sbin/ifconfig $(eth) 10.2.1.86/24
-	/sbin/ifconfig $(eth)
+	eth=$(iff0)
+	echo sudo /sbin/ifconfig $(iff0) 10.2.1.86/24
+	sudo /sbin/ifconfig $(iff0) mtu 9000
+	/sbin/ifconfig $(iff0)
