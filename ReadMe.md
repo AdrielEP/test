@@ -25,6 +25,15 @@ ssh coudert@193.48.111.15 "lpr -Pcopieur_BAS /tmp/graphInfra.png"
 
 `ssh ubuntu@193.48.111.160`
 
+## repository
+
+~~~ { .bash }
+cd ~/tranceivers/
+grep url .git/config 
+        url = ubuntu22@172.16.110.36:~/transceivers
+#SWAP   url = git@gitlab.in2p3.fr:Ganil-acq/Embedded/REActif/hacktif/transceivers
+~~~
+
 ## config
 
 ~~~ { .bash }
@@ -54,6 +63,15 @@ iperf -c 10.2.11.86
 # ganL1401 (U22)
 
 `ssh ubuntu22@172.16.110.36`
+
+## repository
+
+~~~ { .bash }
+cd ~/tranceivers/
+grep url .git/config 
+#SWAP   url =ubuntu@193.48.111.160:tranceivers
+        url = git@gitlab.in2p3.fr:Ganil-acq/Embedded/REActif/hacktif/transceivers
+~~~
 
 ## config
 
