@@ -9,7 +9,12 @@ Intel 10GEth#2 and BroadCom 10GEth#0
 1. make functions and graph
 1. shLib: may integrate graph lines (for auto-graph)
 
+## misc
 
+1. wiki: copy GAPwigi (.page) to repo. wiki (.md)
+      - /HardWare/Broadcom/NetXtreme_II.page
+      - /HardWare/Intel/10GEthSFP.page
+      - /HardWare/Intel/942V6_10GEthSFP_?.page
 
 # graph
 
