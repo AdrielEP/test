@@ -7,8 +7,11 @@ digraph Point2PointNetwork
 #IcyBox PCIe1x 2.5GEth
 	enp5s0[shape=ellipse,label="enp5s0: 2.5GEth\n IP: 10.2.1.86\n MAC: 00:0a:cd:42:95:86"]
 #Intel 10GEth #3
-	enp6s0f0[shape=ellipse,label="enp6s0f0: Intel 10GEth#3\n IP: 10.2.10.84\n MAC:a0:36:9f:26:8f:84"]
-	enp6s0f1[shape=ellipse,label="enp6s0f1: Intel 10GEth#3\n IP: 10.2.11.86\n MAC: a0:36:9f:26:8f:86"]
+#	enp6s0f0[shape=ellipse,label="enp6s0f0: Intel 10GEth#3\n IP: 10.2.10.84\n MAC:a0:36:9f:26:8f:84"]
+#	enp6s0f1[shape=ellipse,label="enp6s0f1: Intel 10GEth#3\n IP: 10.2.11.86\n MAC: a0:36:9f:26:8f:86"]
+#BroadCom 10GEth #0
+	enp6s0f0[shape=ellipse,label="enp6s0f0: BroadCom 10GEth#0\n IP: 10.2.10.84\n MAC: 00:10:18:bd:97:f0"]
+	enp6s0f1[shape=ellipse,label="enp6s0f1: BroadCom 10GEth#0\n IP: 10.2.11.86\n MAC: 00:10:18:bd:97:f2"]
   }//GANL1401
 
   subgraph cluster_GANP349        
