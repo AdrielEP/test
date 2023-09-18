@@ -5,8 +5,9 @@ Intel 10GEth#2 and #3
 # ToDo
 
 0. shLib: function with args
-1. functions: service, setup, ping, perf (iPerf), perf_nc, perf_live (RSync)
-1. make FCT
+1. shLib functions: service, setup, ping, perf (iPerf), perf_nc, perf_live (RSync)
+1. make functions and graph
+1. shLib: may integrate graph lines (for auto-graph)
 
 
 # graph
