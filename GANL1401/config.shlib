@@ -35,8 +35,8 @@ function config_10GEthOrange {
 
 # Config all interfaces
 function globalConf {
-    config_2GEth
-    sleep 0.30
+#    config_2GEth
+#    sleep 0.30
     config_10GEthBlack
     sleep 0.30
     config_10GEthOrange

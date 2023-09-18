@@ -21,14 +21,20 @@ digraph Point2PointNetwork
 #StarTech PCIe1x 1GEth
 	enp6s0[shape=ellipse,label="enp6s0: 1GEth\n IP: 10.2.1.21\n MAC: 00:13:3b:21:c7:2f"]
 #Intel 10GEth #2
-	enp5s0f0[shape=ellipse,label="enp5s0f0: Intel 10GEth#2\n IP: 10.2.10.38\n MAC: a0:36:9f:24:53:e8"]
-	enp5s0f1[shape=ellipse,label="enp5s0f1: Intel 10GEth#2\n IP; 10.2.11.34\n MAC: a0:36:9f:24:53:ea"]
+#	enp5s0f0[shape=ellipse,label="enp5s0f0: Intel 10GEth#2\n IP: 10.2.10.38\n MAC: a0:36:9f:24:53:e8"]
+#	enp5s0f1[shape=ellipse,label="enp5s0f1: Intel 10GEth#2\n IP; 10.2.11.34\n MAC: a0:36:9f:24:53:ea"]
+#BroadCom 10GEth #1
+#	enp5s0f0[shape=ellipse,label="enp5s0f0: HP 10GEth#1\n IP: 10.2.10.84\n MAC: 2c:76:8a:82:72:70"]
+#	enp5s0f1[shape=ellipse,label="enp5s0f1: HP 10GEth#1\n IP: 10.2.11.86\n MAC: 2c:76:8a:82:72:74"]
+#BroadCom 10GEth #2
+	enp5s0f0[shape=ellipse,label="enp5s0f0np0: BroadCom 10GEth#2\n IP: 10.2.10.84\n MAC: 2c:76:8a:82:72:70"]
+	enp5s0f1[shape=ellipse,label="enp5s0f0np1: BroadCom 10GEth#2\n IP: 10.2.11.86\n MAC: 2c:76:8a:82:72:74"]
   }//GANP439
 
 #Eth CAT6
   enp5s0 -> enp6s0 [dir=both color="yellow"]
 #DAC black
   enp6s0f0 -> enp5s0f0 [dir=both color="black"]
-#DAC orange
-  enp6s0f1 -> enp5s0f1 [dir=both color="orange"]
+#Dell SFP 10GEth fiber
+  enp6s0f1 -> enp5s0f1 [dir=both color="Dell SFP 10GEth"]
 }//digraph
