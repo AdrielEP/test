@@ -2,6 +2,25 @@ bench ganP439 (U18) and ganL1401 (U22)
 
 Intel 10GEth#2 and #3
 
+# ToDo
+
+0. shLib: function with args
+1. functions: service, setup, ping, perf (iPerf), perf_nc, perf_live (RSync)
+1. make FCT
+
+
+# graph
+
+~~~ { .bash }
+#vector image
+dot -Tps  graphInfra.dot > graphInfra.ps  && evince  graphInfra.ps
+
+#pixel  image
+dot -Tpng graphInfra.dot > graphInfra.png && display graphInfra.png
+rsync graphInfra.png coudert@193.48.111.15:/tmp/
+ssh coudert@193.48.111.15 "lpr -Pcopieur_BAS /tmp/graphInfra.png"
+~~~
+
 # ganP439 (U18)
 
 `ssh ubuntu@193.48.111.160`
