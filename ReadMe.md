@@ -14,6 +14,13 @@ Intel 10GEth#2 and BroadCom 10GEth#0
 # graph
 
 ~~~ { .bash }
+make
+make graph_print
+~~~
+
+or
+
+~~~ { .bash }
 #vector image
 dot -Tps  graphInfra.dot > graphInfra.ps  && evince  graphInfra.ps
 
