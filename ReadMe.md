@@ -10,6 +10,7 @@ Intel 10GEth#2 and #3
 1. shLib: may integrate graph lines (for auto-graph)
 
 
+
 # graph
 
 ~~~ { .bash }
@@ -70,8 +71,8 @@ iperf -c 10.2.11.86
 ~~~ { .bash }
 cd ~/tranceivers/
 grep url .git/config 
-#SWAP   url =ubuntu@193.48.111.160:tranceivers
-        url = git@gitlab.in2p3.fr:Ganil-acq/Embedded/REActif/hacktif/transceivers
+        url = ubuntu@193.48.111.160:~/transceivers
+#SWAP   url = git@gitlab.in2p3.fr:Ganil-acq/Embedded/REActif/hacktif/transceivers
 ~~~
 
 ## config
@@ -98,3 +99,27 @@ iperf -s
 ~~~ { .text }
 ~~~
 
+# misc
+
+## repositories
+
+# ganP439 (U18)
+
+~~~ { .bash }
+cd ~/tranceivers/
+
+ubuntu@LinuxD:~/transceivers$ ./git_swap_origin.sh 
+        url = ubuntu22@172.16.110.36:~/transceivers
+#SWAP   url = git@gitlab.in2p3.fr:Ganil-acq/Embedded/REActif/hacktif/transceivers
+ubuntu@LinuxD:~/transceivers$ git pull
+ubuntu22@172.16.110.36's password: 
+From 172.16.110.36:~/transceivers
+ + 9d6ea59...2b9ee36 bench_P439U18_L1401U22 -> origin/bench_P439U18_L1401U22  (forced update)
+ + 98939a3...dc9c477 main                   -> origin/main  (forced update)
+Already up to date.
+ubuntu@LinuxD:~/transceivers$ ./git_swap_origin.sh 
+#SWAP   url = ubuntu22@172.16.110.36:~/transceivers
+        url = git@gitlab.in2p3.fr:Ganil-acq/Embedded/REActif/hacktif/transceivers
+ubuntu@LinuxD:~/transceivers$ git push --all
+Everything up-to-date
+~~~
