@@ -1,0 +1,10 @@
+driver: bnx2x
+version: 5.15.0-83-generic
+firmware-version: 7.10.18 bc 6.2.26 phy aa0.406
+expansion-rom-version: 
+bus-info: 0000:06:00.1
+supports-statistics: yes
+supports-test: yes
+supports-eeprom-access: yes
+supports-register-dump: yes
+supports-priv-flags: yes

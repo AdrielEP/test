@@ -55,7 +55,8 @@ cd ~/tranceivers/GANP439/
 git checkout bench_P439U18_L1401U22
 
 sudo systemctl stop NetworkManager.service
-sudo iftop -B -i enp6s0f1
+ethtool -i enp5s0f0np0 | tee driver.txt
+sudo iftop -B -i enp5s0f0np0
 
 ubuntu@LinuxD:~/tranceivers/GANP439$ ./config.sh | tee config.log
 ~~~
@@ -94,7 +95,8 @@ cd ~/tranceivers/GANL1401/
 git checkout bench_P439U18_L1401U22
 
 sudo systemctl stop NetworkManager.service
-sudo iftop -B -i enp6s0f1
+ethtool -i enp6s0f0 | tee driver.txt
+sudo iftop -B -i enp6s0f0
 
 ubuntu22@ubuntu22:~/tranceivers/GANL1401$ ./config.sh | tee config.log
 ~~~
