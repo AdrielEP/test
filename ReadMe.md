@@ -135,3 +135,9 @@ ubuntu@LinuxD:~/transceivers$ ./git_swap_origin.sh
 ubuntu@LinuxD:~/transceivers$ git push --all
 Everything up-to-date
 ~~~
+
+## wiki
+
+~~~ { .bash }
+git clone git@gitlab.in2p3.fr:Ganil-acq/Embedded/REActif/hacktif/transceivers.wiki wiki
+~~~
