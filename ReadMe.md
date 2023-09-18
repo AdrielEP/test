@@ -1,6 +1,6 @@
 bench ganP439 (U18) and ganL1401 (U22)
 
-Intel 10GEth#2 and #3
+Intel 10GEth#2 and BroadCom 10GEth#0
 
 # ToDo
 
