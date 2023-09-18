@@ -1,0 +1,106 @@
+Configuration of the network card
+enp5s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.2.1.86  netmask 255.255.255.0  broadcast 10.2.1.255
+        ether 00:0a:cd:42:95:86  txqueuelen 1000  (Ethernet)
+        RX packets 5  bytes 414 (414.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 106  bytes 15996 (15.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+Settings for enp5s0:
+	Supported ports: [ TP	 MII ]
+	Supported link modes:   10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	                        2500baseT/Full
+	Supported pause frame use: Symmetric Receive-only
+	Supports auto-negotiation: Yes
+	Supported FEC modes: Not reported
+	Advertised link modes:  10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	                        2500baseT/Full
+	Advertised pause frame use: Symmetric Receive-only
+	Advertised auto-negotiation: Yes
+	Advertised FEC modes: Not reported
+	Link partner advertised link modes:  10baseT/Half 10baseT/Full
+	                                     100baseT/Half 100baseT/Full
+	                                     1000baseT/Half 1000baseT/Full
+	Link partner advertised pause frame use: Symmetric Receive-only
+	Link partner advertised auto-negotiation: Yes
+	Link partner advertised FEC modes: Not reported
+	Speed: 1000Mb/s
+	Duplex: Full
+	Auto-negotiation: on
+	master-slave cfg: preferred slave
+	master-slave status: slave
+	Port: Twisted Pair
+	PHYAD: 0
+	Transceiver: external
+	MDI-X: Unknown
+	Link detected: yes
+10.2.1.86 is alive
+10.2.1.21 is alive
+enp6s0f0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.2.10.84  netmask 255.255.255.0  broadcast 10.2.10.255
+        ether 00:10:18:bd:97:f0  txqueuelen 1000  (Ethernet)
+        RX packets 5  bytes 472 (472.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 111  bytes 16480 (16.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 16  memory 0xf7000000-f77fffff  
+
+Settings for enp6s0f0:
+	Supported ports: [ FIBRE ]
+	Supported link modes:   1000baseT/Full
+	                        10000baseT/Full
+	Supported pause frame use: Symmetric Receive-only
+	Supports auto-negotiation: No
+	Supported FEC modes: Not reported
+	Advertised link modes:  10000baseT/Full
+	Advertised pause frame use: No
+	Advertised auto-negotiation: No
+	Advertised FEC modes: Not reported
+	Speed: 10000Mb/s
+	Duplex: Full
+	Auto-negotiation: off
+	Port: Direct Attach Copper
+	PHYAD: 17
+	Transceiver: internal
+        Current message level: 0x00000000 (0)
+                              
+	Link detected: yes
+10.2.10.84 is alive
+10.2.10.38 is unreachable
+enp6s0f1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.2.11.86  netmask 255.255.255.0  broadcast 10.2.11.255
+        ether 00:10:18:bd:97:f2  txqueuelen 1000  (Ethernet)
+        RX packets 8  bytes 778 (778.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 112  bytes 16646 (16.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 17  memory 0xf6000000-f67fffff  
+
+Settings for enp6s0f1:
+	Supported ports: [ FIBRE ]
+	Supported link modes:   1000baseT/Full
+	                        10000baseT/Full
+	Supported pause frame use: Symmetric Receive-only
+	Supports auto-negotiation: No
+	Supported FEC modes: Not reported
+	Advertised link modes:  10000baseT/Full
+	Advertised pause frame use: No
+	Advertised auto-negotiation: No
+	Advertised FEC modes: Not reported
+	Speed: 10000Mb/s
+	Duplex: Full
+	Auto-negotiation: off
+	Port: Direct Attach Copper
+	PHYAD: 16
+	Transceiver: internal
+        Current message level: 0x00000000 (0)
+                              
+	Link detected: yes
+10.2.11.86 is alive
+10.2.11.34 is unreachable
+Interfaces setup
