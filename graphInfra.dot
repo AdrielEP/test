@@ -27,14 +27,14 @@ digraph Point2PointNetwork
 #	enp5s0f0[shape=ellipse,label="enp5s0f0: HP 10GEth#1\n IP: 10.2.10.84\n MAC: 2c:76:8a:82:72:70"]
 #	enp5s0f1[shape=ellipse,label="enp5s0f1: HP 10GEth#1\n IP: 10.2.11.86\n MAC: 2c:76:8a:82:72:74"]
 #BroadCom 10GEth #2
-	enp5s0f0[shape=ellipse,label="enp5s0f0np0: BroadCom 10GEth#2\n IP: 10.2.10.84\n MAC: 2c:76:8a:82:72:70"]
-	enp5s0f1[shape=ellipse,label="enp5s0f0np1: BroadCom 10GEth#2\n IP: 10.2.11.86\n MAC: 2c:76:8a:82:72:74"]
+	enp5s0f0[shape=ellipse,label="enp5s0f0np0: BroadCom 10GEth#2\n IP: 10.2.10.84\n MAC: 00:0a:f7:f0:65:20"]
+	enp5s0f1[shape=ellipse,label="enp5s0f0np1: BroadCom 10GEth#2\n IP: 10.2.11.86\n MAC: 00:0a:f7:f0:65:21"]
   }//GANP439
 
 #Eth CAT6
-  enp5s0 -> enp6s0 [dir=both color="yellow"]
+  enp5s0 -> enp6s0 [label="RJ45 CAT6" dir=both color="yellow"]
 #DAC black
-  enp6s0f0 -> enp5s0f0 [dir=both color="black"]
+  enp6s0f0 -> enp5s0f0 [label="DAC 10GEth black" dir=both color="black"]
 #Dell SFP 10GEth fiber
-  enp6s0f1 -> enp5s0f1 [dir=both color="Dell SFP 10GEth"]
+  enp6s0f1 -> enp5s0f1 [label="Dell SFP 10GEth" dir=both color="orange"]
 }//digraph
