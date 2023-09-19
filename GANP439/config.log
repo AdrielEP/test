@@ -1,10 +1,11 @@
 Configuration of the network card
-enp5s0f0np0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-        inet 10.2.11.34  netmask 255.255.255.0  broadcast 10.2.11.255
+enp5s0f0np0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.17.101  netmask 255.255.255.0  broadcast 10.10.17.255
+        inet6 fe80::20a:f7ff:fef0:6520  prefixlen 64  scopeid 0x20<link>
         ether 00:0a:f7:f0:65:20  txqueuelen 1000  (Ethernet)
         RX packets 0  bytes 0 (0.0 B)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
+        TX packets 84  bytes 12668 (12.6 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 Settings for enp5s0f0np0:
@@ -26,37 +27,8 @@ Settings for enp5s0f0np0:
 	Auto-negotiation: off
 	Current message level: 0x00000000 (0)
 			       
-	Link detected: no
-10.2.10.38 is alive
-10.2.10.84 is unreachable
-enp5s0f0np0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-        inet 10.2.10.38  netmask 255.255.255.0  broadcast 10.2.10.255
-        ether 00:0a:f7:f0:65:20  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-Settings for enp5s0f0np0:
-	Supported ports: [ FIBRE ]
-	Supported link modes:   1000baseT/Full 
-	                        10000baseT/Full 
-	Supported pause frame use: Symmetric Receive-only
-	Supports auto-negotiation: Yes
-	Supported FEC modes: Not reported
-	Advertised link modes:  Not reported
-	Advertised pause frame use: No
-	Advertised auto-negotiation: No
-	Advertised FEC modes: Not reported
-	Speed: 1000Mb/s
-	Duplex: Full
-	Port: Direct Attach Copper
-	PHYAD: 1
-	Transceiver: internal
-	Auto-negotiation: off
-	Current message level: 0x00000000 (0)
-			       
-	Link detected: no
-10.2.11.34 is alive
-10.2.11.86 is unreachable
+	Link detected: yes
+10.10.17.101 is alive
+10.10.17.201 is unreachable
+10.10.17.202 is unreachable
 Interfaces setup

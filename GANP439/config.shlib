@@ -12,37 +12,38 @@ function config_1GEth() {
 }
 
 # Config enp5s0f0
-function config_10GEthBlack() {
+function config_10GEthF0() {
     eth=enp5s0f0
     eth=enp5s0f0np0
 
     ifconfig $eth
     ethtool $eth
 
-    sudo /sbin/ifconfig $eth 10.2.10.38/24
-    fping 10.2.10.38 10.2.10.84
+    ip=10.10.17.101
+    sudo /sbin/ifconfig $eth $ip/24
+    fping $ip 10.10.17.201 10.10.17.202
 }
 
 # Config enp5s0f1
-function config_10GEthOrange() {
+function config_10GEthF1() {
     eth=enp5s0f1
-    eth=enp5s0f0np0
+    eth=enp5s0f1np1
 
     ifconfig $eth
     ethtool $eth
 
-    sudo /sbin/ifconfig $eth 10.2.11.34/24
-    fping 10.2.11.34 10.2.11.86
+    ip=10.10.18.102
+    sudo /sbin/ifconfig $eth $ip/24
+    fping $ip 10.10.18.202
 }
 
 # Config global
 function globalConf() {
 #    config_1GEth
 #    sleep 0.30
-    config_10GEthBlack
+    config_10GEthF0
     sleep 0.30
-    config_10GEthOrange
-    sleep 0.30
+#    config_10GEthF1
+#    sleep 0.30
     echo "Interfaces setup"
 }
-
