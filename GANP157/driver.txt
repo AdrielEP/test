@@ -1,0 +1,11 @@
+ethtool -i p4p1
+
+driver: bnx2x
+version: 1.78.17-0
+firmware-version: 7.10.18 bc 6.2.26 phy aa0.406
+bus-info: 0000:04:00.0
+supports-statistics: yes
+supports-test: yes
+supports-eeprom-access: yes
+supports-register-dump: yes
+supports-priv-flags: yes

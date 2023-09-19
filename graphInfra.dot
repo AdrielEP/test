@@ -1,18 +1,17 @@
 digraph Point2PointNetwork           
 {
-  subgraph cluster_GANL1401        
-  {label=GANL1401
-#motherboard
-	eno1[shape=ellipse,label="eno1: 1GEth\n IP:193.48.111.153\n MAC: 34:17:eb:c7:ab:f6"]
-#IcyBox PCIe1x 2.5GEth
-	enp5s0[shape=ellipse,label="enp5s0: 2.5GEth\n IP: 10.2.1.86\n MAC: 00:0a:cd:42:95:86"]
-#Intel 10GEth #3
-#	enp6s0f0[shape=ellipse,label="enp6s0f0: Intel 10GEth#3\n IP: 10.2.10.84\n MAC:a0:36:9f:26:8f:84"]
-#	enp6s0f1[shape=ellipse,label="enp6s0f1: Intel 10GEth#3\n IP: 10.2.11.86\n MAC: a0:36:9f:26:8f:86"]
+  subgraph cluster_ML507
+  {label="ML507 (baremetal)"
+#BroadCom 10GEth #0
+	SFP[shape=ellipse,label="Xilinx SFP 1GEth\n IP: 10.2.10.84\n MAC: 00:10:18:bd:97:f0"]
+  }//ML507
+
+  subgraph cluster_GANP157
+  {label="GANP157 (CentOS6)"
 #BroadCom 10GEth #0
 	enp6s0f0[shape=ellipse,label="enp6s0f0: BroadCom 10GEth#0\n IP: 10.2.10.84\n MAC: 00:10:18:bd:97:f0"]
 	enp6s0f1[shape=ellipse,label="enp6s0f1: BroadCom 10GEth#0\n IP: 10.2.11.86\n MAC: 00:10:18:bd:97:f2"]
-  }//GANL1401
+  }//GANP157
 
   subgraph cluster_GANP349        
   {label=GANP439
@@ -28,13 +27,11 @@ digraph Point2PointNetwork
 #	enp5s0f1[shape=ellipse,label="enp5s0f1: HP 10GEth#1\n IP: 10.2.11.86\n MAC: 2c:76:8a:82:72:74"]
 #BroadCom 10GEth #2
 	enp5s0f0[shape=ellipse,label="enp5s0f0np0: BroadCom 10GEth#2\n IP: 10.2.10.84\n MAC: 00:0a:f7:f0:65:20"]
-	enp5s0f1[shape=ellipse,label="enp5s0f0np1: BroadCom 10GEth#2\n IP: 10.2.11.86\n MAC: 00:0a:f7:f0:65:21"]
+	enp5s0f1[shape=ellipse,label="enp5s0f1np1: BroadCom 10GEth#2\n IP: 10.2.11.86\n MAC: 00:0a:f7:f0:65:21"]
   }//GANP439
 
-#Eth CAT6
-  enp5s0 -> enp6s0 [label="RJ45 CAT6" dir=both color="yellow"]
 #DAC black
   enp6s0f0 -> enp5s0f0 [label="DAC 10GEth black" dir=both color="black"]
 #Dell SFP 10GEth fiber
-  enp6s0f1 -> enp5s0f1 [label="Dell SFP 10GEth" dir=both color="orange"]
+  enp6s0f1 -> SFP [label="CISCO 1GEth fiber" dir=both color="orange"]
 }//digraph

@@ -18,6 +18,7 @@ lo        Link encap:Local Loopback
           collisions:0 txqueuelen:0 
           RX bytes:2904 (2.8 KiB)  TX bytes:2904 (2.8 KiB)
 
+#fiber CISCO
 p4p1      Link encap:Ethernet  HWaddr 00:10:18:BD:97:F0  
           inet addr:20.10.17.201  Bcast:20.10.17.255  Mask:255.255.255.0
           UP BROADCAST MULTICAST  MTU:1500  Metric:1
@@ -27,6 +28,7 @@ p4p1      Link encap:Ethernet  HWaddr 00:10:18:BD:97:F0
           RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
           Interrupt:16 Memory:f7000000-f77fffff 
 
+#DAC black
 p4p2      Link encap:Ethernet  HWaddr 00:10:18:BD:97:F2  
           inet addr:10.10.17.202  Bcast:10.10.17.255  Mask:255.255.255.0
           UP BROADCAST MULTICAST  MTU:1500  Metric:1
