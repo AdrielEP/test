@@ -2,6 +2,13 @@ bench ganP439 (U18) and ganL1401 (U22)
 
 Intel 10GEth#2 and #3
 
+<!-- online: https://mermaid.live/edit -->
+
+```mermaid
+ graph TD
+    i2f0[Intel 10GEth#2 \n f0: intel-IN2]-->|fiber|i3f0[Intel 10GEth#3 \n f0: intel-IN2];
+```
+
 # ToDo
 
 0. shLib: function with args
@@ -21,6 +28,8 @@ dot -Tpng graphInfra.dot > graphInfra.png && display graphInfra.png
 rsync graphInfra.png coudert@193.48.111.15:/tmp/
 ssh coudert@193.48.111.15 "lpr -Pcopieur_BAS /tmp/graphInfra.png"
 ~~~
+
+![networks](graphInfra.png)
 
 # ganP439 (U18)
 
