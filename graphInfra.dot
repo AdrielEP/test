@@ -28,6 +28,9 @@ digraph Point2PointNetwork
 #BroadCom 10GEth #2
 	enp5s0f0[shape=ellipse,label="enp5s0f0np0: BroadCom 10GEth#2\n IP: 10.2.10.84\n MAC: 00:0a:f7:f0:65:20"]
 	enp5s0f1[shape=ellipse,label="enp5s0f1np1: BroadCom 10GEth#2\n IP: 10.2.11.86\n MAC: 00:0a:f7:f0:65:21"]
+#BroadCom 10GEth #3
+	enp5s0f0[shape=ellipse,label="enp5s0f0: BroadCom 10GEth#3\n IP: 10.2.10.84\n MAC: 00:10:18:98:05:04"]
+	enp5s0f1[shape=ellipse,label="enp5s0f1: BroadCom 10GEth#3\n IP: 10.2.11.86\n MAC: 00:10:18:98:05:06"]
   }//GANP439
 
 #DAC black

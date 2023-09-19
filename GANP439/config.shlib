@@ -14,7 +14,7 @@ function config_1GEth() {
 # Config enp5s0f0
 function config_10GEthF0() {
     eth=enp5s0f0
-    eth=enp5s0f0np0
+    #eth=enp5s0f0np0
 
     ifconfig $eth
     ethtool $eth
@@ -27,7 +27,7 @@ function config_10GEthF0() {
 # Config enp5s0f1
 function config_10GEthF1() {
     eth=enp5s0f1
-    eth=enp5s0f1np1
+    #eth=enp5s0f1np1
 
     ifconfig $eth
     ethtool $eth
