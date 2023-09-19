@@ -1,0 +1,37 @@
+coudert@ganp157:~$ ifconfig 
+em1       Link encap:Ethernet  HWaddr 98:90:96:BF:E5:82  
+          inet addr:193.48.111.200  Bcast:193.48.111.255  Mask:255.255.255.0
+          inet6 addr: fe80::9a90:96ff:febf:e582/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1341 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1165 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:353435 (345.1 KiB)  TX bytes:165604 (161.7 KiB)
+          Interrupt:20 Memory:f7c00000-f7c20000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:38 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2904 (2.8 KiB)  TX bytes:2904 (2.8 KiB)
+
+p4p1      Link encap:Ethernet  HWaddr 00:10:18:BD:97:F0  
+          inet addr:20.10.17.201  Bcast:20.10.17.255  Mask:255.255.255.0
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+          Interrupt:16 Memory:f7000000-f77fffff 
+
+p4p2      Link encap:Ethernet  HWaddr 00:10:18:BD:97:F2  
+          inet addr:10.10.17.202  Bcast:10.10.17.255  Mask:255.255.255.0
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+          Interrupt:17 Memory:f6000000-f67fffff 
