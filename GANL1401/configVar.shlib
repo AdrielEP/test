@@ -1,0 +1,8 @@
+#!/bin/bash
+GANL=("enp5s0","enp6s0f0","enp6s0f1")
+GANLIP=("1.86","10.84","11.86")
+
+GANP=("enp6s0","enp5s0f0","enp5s0f1")
+GANPIP=("1.21","10.38","10.34")
+IP="10.2."
+
