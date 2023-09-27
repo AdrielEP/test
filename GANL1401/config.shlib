@@ -33,29 +33,19 @@ function config_10GEthOrange {
     fping 10.2.11.86 10.2.11.34
 }
 
-# Config all interfaces
-function globalConf {
-    config_2GEth
-    sleep 0.30
-    config_10GEthBlack
-    sleep 0.30
-    config_10GEthOrange
-    sleep 0.30
-    echo "Interfaces setup"
-}
-
 source "configVar.shlib"
 
 function service(){
     sudo systemctl stop NetworkManager.service
 }
 
+# need 2 arg -> 1: name of interface 2:IP (without  fix part and mask)
 function setup(){
     eth=$1
     ip=$IP$2"/24"
-    ifconfig $eth
-    ethtool $eth
-    sudo /sbin/ifconfig $eth $ip
+    #ifconfig $eth
+    #ethtool $eth
+    #sudo /sbin/ifconfig $eth $ip
     echo $eth
     echo $ip
 }
