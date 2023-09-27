@@ -1,5 +1,5 @@
 #!/bin/bash
-source "config.shlib"
+source "../config.shlib"
 source "configVar.shlib"
 
 echo "Configuration of the network card"
