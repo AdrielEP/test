@@ -1,5 +1,5 @@
 #!/bin/bash
-source "configVar.shlib"
+IP="10.2."
 
 function service(){
     sudo systemctl stop NetworkManager.service

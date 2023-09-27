@@ -2,5 +2,5 @@
 all: setup
 
 #setup interface
-setup: ../config.shlib config.sh
+setup: ../function.shlib config.sh
 	./config.sh
