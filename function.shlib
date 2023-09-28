@@ -9,14 +9,15 @@ function service(){
 function setup(){
     eth=$1
     ip=$IP$2"/24"
-    #ifconfig $eth
-    #ethtool $eth
-    #sudo /sbin/ifconfig $eth $ip
+    ifconfig $eth
+    ethtool $eth
+    sudo /sbin/ifconfig $eth $ip
     echo $eth
     echo $ip
 }
 
+# need 1 arg -> 1:IP (without  fix part and mask)
 function ping(){
-    ip=$IP$1"/24"
+    ip=$IP$1
     fping $ip
 }
