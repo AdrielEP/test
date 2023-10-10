@@ -21,3 +21,22 @@ function ping(){
     ip=$IP$1
     fping $ip
 }
+
+# function to get the IP addresses from the configVar.shlib file of the other machine
+function get_ip() {
+    #Find the path to configVar of the second machine
+    linked=$(find /home/ubuntu22/code/transceivers -name "configVar.shlib" -type f -not -path "$(pwd)/*")
+
+    #Get the IP list from the configVar.shlib file of the other machine 
+    scopingList=$(sudo cat $linked | grep 'IP=('| awk -F'[=]' '{print $2}')
+    
+    #Remove unwanted characters from the string-> ( ) "
+    list_string="${scopingList//\(/}"
+    list_string="${list_string//\)/}"
+    list_string="${list_string//\"/}"
+
+    #Use IFS  env. var. to split the string into an array
+    IFS=" " read -a trimedList <<< "$list_string"
+    # Return the array of IP addresses
+    echo "${trimedList[@]}"
+}
