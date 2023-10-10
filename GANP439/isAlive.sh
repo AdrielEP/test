@@ -4,7 +4,7 @@ source "configVar.shlib"
 
 echo "Pinging this machine interfaces and his Matching  one"
 
-linked=$(find /home/ubuntu22/transceivers -name "configVar.shlib" -type f -not -path "$(pwd)/*")
+linked=$(find /home/ubuntu22/code/transceivers -name "configVar.shlib" -type f -not -path "$(pwd)/*")
 echo "Other machine path: "$linked
 
 scopingList=$(sudo cat $linked | grep 'IP=('| awk -F'[=]' '{print $2}')
