@@ -8,11 +8,11 @@ machineName=$(get_machineName)
 
 #Matcheur: create an array of matching ip for each interface
 ARRAY=()
-for ((i=0; i<${#GANLIP[@]}; i++));do
-    matchingPart="${GANLIP[$i]%.*}."
+for ((i=0; i<${#GANPIP[@]}; i++));do
+    matchingPart="${GANPIP[$i]%.*}."
     for element in "${trimedList[@]}"; do
         if [[ "$element" == "$matchingPart"* ]]; then
-            ARRAY+=("${GANLIP[$i]}:$element")
+            ARRAY+=("${GANPIP[$i]}:$element")
         fi
     done
 done
