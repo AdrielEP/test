@@ -2,11 +2,10 @@
 source "../function.shlib"
 source "configVar.shlib"
 
-
-trimedList=($(get_ip))
 # Print the array of IP addresses
+trimedList=($(get_ip))
+machineName=$(get_machineName)
 
-machineName="ubuntu@"
 #Matcheur: create an array of matching ip for each interface
 ARRAY=()
 for ((i=0; i<${#GANL[@]}; i++));do

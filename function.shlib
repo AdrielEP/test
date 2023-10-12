@@ -41,3 +41,16 @@ function get_ip() {
     echo "${trimedList[@]}"
 }
 
+function get_machineName(){
+    #Find the path to configVar of the second machine
+    linked=$(find /home/ubuntu22/code/transceivers -name "configVar.shlib" -type f -not -path "$(pwd)/*")
+    
+    #Get the machine name from the configVar.shlib file of the other machine 
+    scopingVar=$(sudo cat $linked | grep 'machineName='| awk -F'[=]' '{print $2}')
+
+    #Remove unwanted characters from the string-> " and space 
+    scopingVar="${scopingVar//\"/}"
+    scopingVar="${scopingVar//\ /}"
+
+    echo "${scopingVar}"
+}
