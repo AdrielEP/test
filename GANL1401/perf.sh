@@ -5,14 +5,19 @@ source "configVar.shlib"
 
 trimedList=($(get_ip))
 # Print the array of IP addresses
-echo "IP array: ${trimedList[@]}"
 
-#todo:Ajout du "Matcheur"
-#todo:trouver moyen pour créer tableau entre machine hote[KEY] et machine distante[VALUE]
 machineName="ubuntu@"
-ARRAY=( "1.86:1.21"
-        "10.84:10.38"
-        "11.86:11.34")
+#Matcheur: create an array of matching ip for each interface
+ARRAY=()
+for ((i=0; i<${#GANL[@]}; i++));do
+    matchingPart="${GANLIP[$i]%.*}."
+    for element in "${trimedList[@]}"; do
+        if [[ "$element" == "$matchingPart"* ]]; then
+            ARRAY+=("${GANLIP[$i]}:$element")
+        fi
+    done
+done
+echo "Array of matching interface: ${ARRAY[@]}"
 
 echo "Nom machine: "$machineName
 echo "IP machine: "$IP${trimedList[0]}

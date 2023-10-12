@@ -40,3 +40,4 @@ function get_ip() {
     # Return the array of IP addresses
     echo "${trimedList[@]}"
 }
+
