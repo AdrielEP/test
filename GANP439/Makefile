@@ -1,5 +1,5 @@
 
-all: setup ping
+all: setup ping perf
 
 #setup interface
 setup: ../function.shlib config.sh
