@@ -9,6 +9,3 @@ setup: ../function.shlib config.sh
 #ping both interfaces
 ping:	../function.shlib isAlive.sh
 	./isAlive.sh
-
-perf: 	../function.shlib perf.sh
-	./perf.sh
