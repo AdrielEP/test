@@ -1,32 +1,24 @@
 #!/bin/bash
 IP="10.2."
 
+# # function to get the IP addresses from the configVar.shlib file of the other machine
+# function get_ip() {
+#     #Find the path to configVar of the second machine
+#     linked=$(find /home/ubuntu22/code/transceivers -name "configVar.shlib" -type f -not -path "$(pwd)/*")
 
-
-# need 1 arg -> 1:IP (without  fix part and mask)
-function ping(){
-    ip=$IP$1
-    fping $ip
-}
-
-# function to get the IP addresses from the configVar.shlib file of the other machine
-function get_ip() {
-    #Find the path to configVar of the second machine
-    linked=$(find /home/ubuntu22/code/transceivers -name "configVar.shlib" -type f -not -path "$(pwd)/*")
-
-    #Get the IP list from the configVar.shlib file of the other machine 
-    scopingList=$(sudo cat $linked | grep 'IP=('| awk -F'[=]' '{print $2}')
+#     #Get the IP list from the configVar.shlib file of the other machine 
+#     scopingList=$(sudo cat $linked | grep 'IP=('| awk -F'[=]' '{print $2}')
     
-    #Remove unwanted characters from the string-> ( ) "
-    list_string="${scopingList//\(/}"
-    list_string="${list_string//\)/}"
-    list_string="${list_string//\"/}"
+#     #Remove unwanted characters from the string-> ( ) "
+#     list_string="${scopingList//\(/}"
+#     list_string="${list_string//\)/}"
+#     list_string="${list_string//\"/}"
 
-    #Use IFS  env. var. to split the string into an array
-    IFS=" " read -a trimedList <<< "$list_string"
-    # Return the array of IP addresses
-    echo "${trimedList[@]}"
-}
+#     #Use IFS  env. var. to split the string into an array
+#     IFS=" " read -a trimedList <<< "$list_string"
+#     # Return the array of IP addresses
+#     echo "${trimedList[@]}"
+# }
 
 function get_machineName(){
     #Find the path to configVar of the second machine
@@ -42,9 +34,106 @@ function get_machineName(){
     echo "${scopingVar}"
 }
 
+#************Getters************
+
 function get_path(){
     echo "$PWD"
 }
+
+function get_remote_path(){
+    path=$(get_path)
+    currentDir=$(basename "$path")
+    linked=$(find ../ -name "configVar.shlib" -type f -not -path "../$currentDir*")
+    dir=$(dirname "$linked")
+    #base=$(basename "$dir") #get the name of the folder
+    echo "$dir"
+}
+
+# need 1 arg -> 1:position of the ip in the array
+function get_ip(){
+    path=$(get_path)
+    source "$path/configVar.shlib"
+    echo "${net[$1]}.${host[$1]}"
+}
+# need 1 arg -> 1:position of the ip in the array
+function get_remote_ip(){
+    path=$(get_remote_path)
+    source "$path/configVar.shlib"
+    echo "${net[$1]}.${host[$1]}"
+}
+
+# need 1 arg -> 1:position of the interface in the array
+function get_interface(){
+    path=$(get_path)
+    source "$path/configVar.shlib"
+    echo "${interfaces[$1]}"
+}
+
+# need 1 arg -> 1:position of the interface in the array
+function get_remote_interface(){
+    path=$(get_remote_path)
+    source "$path/configVar.shlib"
+    echo "${interfaces[$1]}"
+}
+
+function get_all_array(){
+    path=$(get_path)
+    source "$path/configVar.shlib"
+    case $1 in
+        "interfaces")
+            echo "${interfaces[@]}"
+            ;;
+        "net")
+            echo "${net[@]}"
+            ;;
+        "host")
+            echo "${host[@]}"
+            ;;
+        *)
+            echo "Invalid argument. Usage: get_all_array [interfaces|net|host]"
+            ;;
+    esac
+}
+
+function get_all_remote_array(){
+    path=$(get_remote_path)
+    source "$path/configVar.shlib"
+    case $1 in
+        "interfaces")
+            echo "${interfaces[@]}"
+            ;;
+        "net")
+            echo "${net[@]}"
+            ;;
+        "host")
+            echo "${host[@]}"
+            ;;
+        *)
+            echo "Invalid argument. Usage: get_all_array [interfaces|net|host]"
+            ;;
+    esac
+}
+
+# need 2 arg -> 1:what to get 2:where to search it
+function get_match(){
+    path=$(get_path)
+    source "$path/configVar.shlib"
+
+    local tofind=$1
+    shift
+    local list=("$@")
+
+    for ((i=0; i<${#list[@]}; i++))
+    do 
+        if [[ "$tofind" == "${list[$i]}" ]]; then
+            echo "$i"
+        fi
+    done
+
+}
+
+#**********END***Getters************
+
 
 # need 2 arg -> 1: name of interface 2:IP (without mask)
 function setup(){
@@ -54,4 +143,10 @@ function setup(){
     sudo /sbin/ifconfig $eth $ip
     echo $eth
     echo $ip    
+}
+
+# need 1 arg -> 1:IP (without  fix part and mask)
+function ping(){
+    ip=$1
+    fping $ip
 }
