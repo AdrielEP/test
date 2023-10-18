@@ -3,12 +3,12 @@ source "../function.shlib"
 source "configVar.shlib"
 
 echo "Configuration of the network card"
-for ((i=0; i<${#GANP[@]}; i++))
+for ((i=0; i<${#interfaces[@]}; i++))
 do
 	echo "----------------------------"
-	echo "interface : ${GANP[$i]}"
-    echo "will have : ${GANPIP[$i]}"
+	echo "interface : ${interface[$i]}"
+    echo "will have : ${net[$i]}.${host[$i]}"
 	echo "-----setuping interface-----"
-	setup "${GANP[$i]}" "${GANPIP[$i]}" 
+	setup "${interfaces[$i]}" "${net[$i]}.${host[$i]}"
 done
 
