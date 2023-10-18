@@ -1,6 +1,6 @@
 #!/bin/bash
-GANP=("enp6s0" "enp5s0f0" "enp5s0f1")
-GANPIP=("1.21" "10.38" "11.34")
-IP="10.2."
+interfaces=("enp6s0" "enp5s0f0" "enp5s0f1")
+net=("10.2.1" "10.2.10" "10.2.11")
+host=("21" "38" "34")
 #machine name must include the  @
 machineName="ubuntu@" 
