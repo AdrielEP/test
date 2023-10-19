@@ -2,8 +2,8 @@
 all: setup ping perf
 
 #setup interface
-setup: ../function.shlib ../config.sh
-	../config.sh
+setup: ../function.shlib ../setup.sh
+	../setup.sh
 
 #ping both interfaces
 ping:	../function.shlib ../isAlive.sh
