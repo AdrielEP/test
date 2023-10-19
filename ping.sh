@@ -1,9 +1,6 @@
 #!/bin/bash
 source "../function.shlib"
 
-remotepath=$(get_remote_path)
-source "$remotepath/configVar.shlib"
-
 remoteinterfaces=($(get_all_remote_array "interfaces"))
 remotenet=($(get_all_remote_array "net"))
 remotehost=($(get_all_remote_array "host"))
