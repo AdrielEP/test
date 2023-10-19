@@ -1,5 +1,5 @@
 
-all: setup pingAll perf
+all: setup pingAll perfAll
 
 #setup interface
 setup: ../function.shlib ../setup.sh
@@ -13,5 +13,5 @@ ping : ../function.shlib ../ping.sh
 pingAll:	../function.shlib ../pingAll.sh
 	../pingAll.sh
 
-perf: 	../function.shlib perf.sh
-	./perf.sh
+perfAll: 	../function.shlib ../perfAll.sh
+	../perfAll.sh

@@ -3,4 +3,4 @@ interfaces=("enp6s0" "enp5s0f0" "enp5s0f1")
 net=("10.2.1" "10.2.10" "10.2.11")
 host=("21" "38" "34")
 #machine name must include the  @
-machineName="ubuntu@" 
+username="ubuntu@" 

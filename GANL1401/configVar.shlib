@@ -7,4 +7,4 @@ host=("86" "84" "86")
 #interface[3]= eth4
 #host[3]=96
 #machine name  must include  @
-machineName="ubuntu22@"
+username="ubuntu22@"
