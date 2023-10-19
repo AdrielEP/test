@@ -1,5 +1,9 @@
 
-all: setup pingAll perfAll
+all:  init setup pingAll perfAll
+
+#stop network manager
+init: ../init.sh
+	../init.sh
 
 #setup interface
 setup: ../function.shlib ../setup.sh
