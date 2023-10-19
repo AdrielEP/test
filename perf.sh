@@ -10,7 +10,7 @@ source "configVar.shlib"
 
 xfce4-terminal --hold -e "ssh -t $remoteusername${remotenet[0]}.${remotehost[0]} '
                                                                                 iperf -s -D &&
-                                                                                sleep 40 &&
+                                                                                sleep 25 &&
                                                                                 echo 'the iperf server is kill, you can close the window' 
                                                                                 pkill -f iperf 
                                                                                 '
@@ -19,7 +19,7 @@ echo "The bandwith test has start"
 sleep 10
 
 echo "-----Bandwith test----" > perfResult.txt
-for((i=0;i<${#interfaces[@]};i++));do
+for i in $*;do
     echo "Bandwith test  in progress"
     echo "
     Testing from interface ${interfaces[$i]} to ${remoteinterfaces[$i]}

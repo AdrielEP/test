@@ -13,5 +13,10 @@ ping : ../function.shlib ../ping.sh
 pingAll:	../function.shlib ../pingAll.sh
 	../pingAll.sh
 
+#perf interfaces on the same array position
+perf : ../function.shlib ../perf.sh
+	../perf.sh $(ARGS)
+
+#perf all interfaces
 perfAll: 	../function.shlib ../perfAll.sh
 	../perfAll.sh
