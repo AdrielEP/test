@@ -24,11 +24,9 @@ do
 	echo "----------------------------"
 	echo "Pinging the corresponding interface on the remote machine"
 	echo "----------------------------"
-	corresponding_position=$(get_match "${net[$i]}" ${remotenet[@]})
-
-	echo "It's ${remoteinterfaces[$corresponding_position]}   interface"
-	echo "with IP: ${remotenet[$corresponding_position]}.${remotehost[$corresponding_position]}"
-	ping "${remotenet[$corresponding_position]}.${remotehost[$corresponding_position]}"
+	echo "It's ${remoteinterfaces[$i]}   interface"
+	echo "with IP: ${remotenet[$i]}.${remotehost[$i]}"
+	ping "${remotenet[$i]}.${remotehost[$i]}"
 done
 
 
